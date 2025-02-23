@@ -30,7 +30,10 @@ class MyStack<T> {
     }
 
     public T pop(){
-        
+        if(length>=0 && length<SIZE){
+            length--;
+            return stack[length];
+        }
         return null;
     }
 
