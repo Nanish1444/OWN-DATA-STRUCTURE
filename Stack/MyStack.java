@@ -31,8 +31,9 @@ class MyStack<T> {
 
     public T pop(){
         if(length>=0 && length<SIZE){
+            T val = stack[length];
             length--;
-            return stack[length];
+            return val;
         }
         return null;
     }
@@ -52,9 +53,9 @@ class MyStack<T> {
     public String toString(){
         StringBuilder str = new StringBuilder();
         str.append('[');
-        for(int i=0;i<length;i++){
+        for(int i=0;i<=length;i++){
             str.append(stack[i]);
-            if(i<length-1){
+            if(i<length){
                 str.append(", ");
             }
         }
